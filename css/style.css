@@ -1,0 +1,31 @@
+
+/* reset starts  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    overflow-x: hidden;
+}
+
+
+/* reset ends  */
+
+
+/* actual css starts  */
+.head_section{
+    height: 90vh;
+    width: 100vw;
+    /* background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("../image/intro_3.jpg"); */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+}
+
