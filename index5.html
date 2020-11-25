@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- font-awesome style  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" integrity="sha512-kJ30H6g4NGhWopgdseRb8wTsyllFUYIx3hiUwmGAkgA9B/JbzUBDQVr2VVlWGde6sdBVOG7oU8AL35ORDuMm8g==" crossorigin="anonymous" />
+
+    <!-- owl carousel style  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
+
+	<title>IT Bangla Limited</title>
+
+    <style>
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        body{
+            font-size: 1.6rem;
+            overflow-x: hidden;
+        }
+        /* reset css ends  */
+
+
+        /* header css starts  */
+        header{
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .header_section {
+			position: absolute;
+			z-index: 9;
+			width: 100%;
+			
+			top: 0;
+			padding: 2rem 0;
+			/* border-bottom: 2px solid #fff; */
+		}
+
+        .logo {
+			font-size: 2.5rem;
+			/* color: #333; */
+			color: #fff;
+			font-weight: bold;
+		}
+
+        .info {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+		}
+
+		.info p {
+			display: inline-block;
+			margin-right: 2rem;
+			font-size: 2rem;
+		}
+
+
+
+        		/* navbar css starts  */
+                .nav_section {
+			position: absolute;
+			z-index: 9;
+			width: 100%;
+			
+			top: 50px;
+			padding: 2rem 0;
+			 
+		    }
+		/* .menu {
+           
+			width: 100% !important;
+		} */
+
+		.menu ul li a {
+			display: block;
+			/* color: #333!important; */
+			color: #fff !important;
+			padding: 1.5rem 2rem !important;
+			font-size: 2.5rem;
+			/* font-weight: bold; */
+		}
+
+		.dropdown-item a {
+			color: #333 !important;
+		}
+
+		i {
+			margin: 8px;
+		}
+
+		/* navbar css ends  */
+
+
+		/* navbar2 css starts  */
+		/* nav {
+			background: #1b1b1b;
+		} */
+
+		nav:after {
+			content: '';
+			clear: both;
+			display: table;
+		}
+
+		
+
+		nav ul {
+			/* float: right; */
+			margin-right: 20px;
+			list-style: none;
+			position: relative;
+		}
+
+		nav ul li {
+			/* float: left; */
+			display: inline-block;
+			/* background: #1b1b1b; */
+			margin: 0 3px;
+		}
+
+        
+
+		nav ul li a {
+			color: white;
+			line-height: 70px;
+			text-decoration: none;
+			font-size: 2.8rem;
+			padding: 8px 12px;
+		}
+
+        
+
+		nav ul li a:hover {
+			color: cyan;
+			border-radius: 5px;
+            background: #1b1b1b;
+			box-shadow: 0 0 5px #33ffff, 0 0 10px #66ffff;
+			text-decoration: none;
+		}
+
+		nav ul ul li a:hover {
+			box-shadow: none;
+		}
+
+		nav ul ul {
+			position: absolute;
+			top: 90px;
+			border-top: 3px solid cyan;
+			opacity: 0;
+			visibility: hidden;
+			transition: top .3s;
+		}
+
+		nav ul ul ul {
+			border-top: none;
+            
+		}
+
+		nav ul li:hover>ul {
+			top: 70px;
+			opacity: 1;
+			visibility: visible;
+		}
+
+		nav ul ul li {
+			position: relative;
+			margin: 0px;
+			/* width: 150px; */
+			width: 380px;
+            background: #1b1b1b;
+			float: none;
+			display: list-item;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            
+		}
+		
+
+		nav ul ul li a {
+			line-height: 50px;
+			font-size: 1.8rem;
+            
+		}
+
+        nav ul ul li a:hover{
+            text-decoration: none;
+        }
+
+		/* nav ul ul ul li {
+			position: relative;
+			top: -60px;
+			left: 150px;
+            text-decoration: none;
+		} */
+
+		.show,
+		.icon,
+		input {
+			display: none;
+		}
+
+		
+
+		.fa-plus {
+			font-size: 15px;
+			margin-left: 40px;
+		}
+
+		@media all and (max-width: 768px) {
+            nav{
+                width: 100%;
+                background-color: #333333;
+                margin-top: 1.6rem;
+            }
+            #contact{
+                font-size: 1.6rem;
+            }
+			nav ul {
+				margin-right: 0px;
+				float: left;
+                background-color: #333;
+			}
+
+			nav .logo {
+				padding-left: 30px;
+				width: 100%;
+			}
+
+			.show+a,
+			ul {
+				display: none;
+			}
+
+			nav ul li,
+			nav ul ul li {
+				display: block;
+				width: 100%;
+                background-color: #333;
+
+                
+			}
+
+			nav ul li a:hover {
+				box-shadow: none;
+			}
+
+			.show {
+				display: block;
+				color: white;
+				font-size: 14px;
+				padding: 0 20px;
+				line-height: 70px;
+				cursor: pointer;
+                
+			}
+
+			.show:hover {
+				color: cyan;
+			}
+
+			.icon {
+				display: block;
+				color: white;
+				position: absolute;
+				top: 0;
+				right: 40px;
+				line-height: 70px;
+				cursor: pointer;
+				font-size: 25px;
+			}
+
+			nav ul ul {
+				top: 70px;
+				border-top: 0px;
+				float: none;
+				position: static;
+				display: none;
+				opacity: 1;
+				visibility: visible;
+			}
+
+			nav ul ul a {
+				padding-left: 40px;
+			}
+
+			nav ul ul ul a {
+				padding-left: 80px;
+			}
+
+			nav ul ul ul li {
+				position: static;
+                /* background-color: #333; */
+			}
+
+			[id^=btn]:checked+ul {
+				display: block;
+			}
+
+			nav ul ul li {
+				border-bottom: 0px;
+			}
+
+			span.cancel:before {
+				content: '\f00d';
+			}
+		}
+
+		/* navbar2 css ends  */
+
+
+        /* slider starts  */
+        .bg_slider{
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+           
+        }
+        .single_slide{
+            height: 100vh;
+            width: 100vw;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* slider ends  */
+
+        /* slide content starts  */
+        .slide_content{
+            height: 80%;
+            width: 80%;
+            text-align: center;
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            
+        }
+        .center{
+            width: 100%;
+            /* position: relative; */
+            /* top: 50%; */
+            color: #fff;
+            /* transform: translateY(-10%); */
+        }
+        .center h1{
+            font-size: 6rem; 
+            letter-spacing: .8rem;
+            word-spacing: .8rem;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .center h3{
+            font-size: 4rem;
+            letter-spacing: .8rem;
+            word-spacing: .8rem;
+            font-family: 'Roboto Mono', monospace;
+        }
+        .center a{
+            font-size: 2rem;
+            padding: .8rem;
+        }
+        /* slide content ends  */
+
+        /* header carousel starts  */
+        .bg_slider .owl-dots {
+			position: absolute;
+			left: 50%;
+			bottom: 20px;
+			transform: translateX(-50%);
+			/* height: 28px!important; */
+			height: 40px;
+			width: 94px;
+			background-color: #787070;
+			border: medium none;
+			border-radius: 100px;
+		}
+
+		.bg_slider .owl-dots button {
+			width: 20px;
+			height: 20px;
+			background-color: #fff !important;
+			margin: 0 5px;
+			border-radius: 50%;
+		}
+
+		.bg_slider .owl-dots .active {
+			background-color: #34bf49 !important;
+		}
+        /* header carousel ends  */
+
+        /* header css ends  */
+
+
+
+
+
+        /* media query starts  */
+
+
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+        
+            .center h3{
+                    display: none;
+                }
+
+                .center h1{
+                font-size: 4rem; 
+                letter-spacing: .2rem;
+                word-spacing: .4rem;
+                font-weight: bold;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .center{
+                width: 100%;
+                position: relative;
+                top: 50%;
+                color: #fff;
+                transform: translateY(-15%);
+            }
+
+            .bg_slider .owl-dots {
+                position: absolute;
+                left: 50%;
+                bottom: 20px;
+                transform: translateX(-50%);
+                /* height: 28px!important; */
+                height: 30px;
+                width: 94px;
+                background-color: #787070;
+                border: medium none;
+                border-radius: 100px;
+		    }
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+        
+            .center h3{
+                    display: none;
+                }
+
+                .center h1{
+                font-size: 4rem; 
+                letter-spacing: .2rem;
+                word-spacing: .4rem;
+                font-weight: bold;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .center{
+                width: 100%;
+                position: relative;
+                top: 50%;
+                color: #fff;
+                transform: translateY(-15%);
+            }
+
+            .bg_slider .owl-dots {
+                position: absolute;
+                left: 50%;
+                bottom: 20px;
+                transform: translateX(-50%);
+                /* height: 28px!important; */
+                height: 30px;
+                width: 94px;
+                background-color: #787070;
+                border: medium none;
+                border-radius: 100px;
+		    }
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            .center{
+                width: 100%;
+                position: relative;
+                top: 50%;
+                color: #fff;
+                transform: translateY(-15%);
+            }
+
+            #content2 {
+                font-size: 6rem;
+            }
+
+            .center h1{
+                font-size: 8rem; 
+                letter-spacing: .4rem;
+                word-spacing: .8rem;
+                font-weight: bold;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .center h3{
+                font-size: 4rem;
+                letter-spacing: .4rem;
+                word-spacing: .8rem;
+                display: block;
+            }
+            .center a{
+                font-size: 1.8rem;
+                padding: .8rem;
+                margin-top: .8rem;
+            }
+        } 
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            /* slide content starts  */
+            .center h1{
+                    font-size: 8rem; 
+                    letter-spacing: .8rem;
+                    word-spacing: .8rem;
+                    font-weight: bold;
+                    margin-top: 1.8rem;
+                    margin-bottom: 1.8rem;
+                }
+                .center h3{
+                    font-size: 4rem;
+                    letter-spacing: .8rem;
+                    word-spacing: .8rem;
+                    display: block;
+                }
+                .center a{
+                    font-size: 2rem;
+                    padding: .8rem;
+                    margin-top: .8rem;
+                }
+            /* slide content ends */
+
+            /* nav css starts  */
+            .nav_section {
+			    position: absolute;
+			    z-index: 9;
+			    width: 100%;
+			
+			    top: 50px;
+			    padding: 2rem 0;
+			 
+		    }
+            /* nav css ends  */
+        } 
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+        .example {background: pink;}
+        }
+
+
+        /* media query ends  */
+        
+
+    </style>
+  </head>
+  <body>
+    
+
+
+    <!-- header section starts  -->
+    <header>
+
+        <!-- company branding starts  -->
+        <section class="header_section" >
+            
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <div class="logo">
+                            <span style="height: 1rem; width: 1rem; padding:8px; background-color: #34bf49;">IT</span> Bangla
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-9">
+                        <div class="info mt-4 float-md-right float-lg-right">
+                            <p><i class="fas fa-phone-alt text-warning"></i> +88099999999</p>
+                            <p><i class="far fa-envelope text-warning"></i> info@itbangla.net</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- company branding ends  -->
+
+
+
+        <!-- navbar 2 starts  -->
+
+        <section class="nav_section">
+            <div class="container-fluid ">
+            <div class="row justify-content-center">
+		<nav>
+
+			<label for="btn" class="icon">
+				<span class="fa fa-bars"></span>
+			</label>
+			<input type="checkbox" id="btn">
+
+
+
+
+			
+			<ul>
+				<li>
+					<label for="btn-0" class="show">ABOUT US +</label>	
+						<a href="#">
+							<i class="far fa-file-alt"></i>
+							ABOUT US
+						</a>
+						<input type="checkbox" id="btn-0">
+						<ul>
+						<li class="about"><a href="#">Corporate Profile</a></li>
+						<li class="about"><a href="#">Our Goals</a></li>
+						<li class="about"><a href="#">Buiness Focus</a></li>
+						<li class="about"><a href="#">Clients</a></li>
+						<li class="about"><a href="#">Certificates & awards</a></li>
+						<li class="about"><a href="#">Directors</a></li>
+					</ul>
+				</li>
+				<li>
+					<label for="btn-1" class="show">TRAINING ACADEMY +</label>
+					<a href="#">
+						<i class="far fa-file-alt"></i>
+						TRAINING ACADEMY
+					</a>
+					<input type="checkbox" id="btn-1">
+					<ul>
+						<li><a href="#">GED</a></li>
+						<li><a href="#">Industrial Training</a></li>
+						<li><a href="#">Oracle</a></li>
+						<li><a href="#">Java SE 8</a></li>
+						<li><a href="#">Redhat</a></li>
+						<li><a href="#">CCNA</a></li>
+						<li><a href="#">MCSE</a></li>
+						<li><a href="#">ASP.NET/C#</a></li>
+						<li><a href="#">Web Development</a></li>
+						<li><a href="#">RHCSS</a></li>
+						<li><a href="#">Certified Ethical Hacking</a></li>
+					</ul>
+				</li>
+				<li>
+					<label for="btn-2" class="show">TESTING CENTER +</label>
+					<a href="#">
+                        <i class="far fa-file-alt"></i>TESTING CENTER</a>
+					<input type="checkbox" id="btn-2">
+					<ul>
+						<li><a href="#">Pearson VUE</a></li>
+						<li><a href="#">Redhat</a></li>
+						<li><a href="#">GMAT</a></li>
+						<li><a href="#">TOEFL</a></li>
+						<li><a href="#">BCAT</a></li>
+						<li><a href="#">PTE</a></li>
+					</ul>
+				</li>
+				<li>
+					<label for="btn-3" class="show">SOFTWARE +</label>
+					<a href="#">
+						<i class="far fa-file-alt"></i>
+						SOFTWARE
+					</a>
+					<input type="checkbox" id="btn-3">
+					<ul>
+						<li><a href="#">HR management system</a></li>
+						<li><a href="#">Payrol management system</a></li>
+						<li><a href="#">Attendance management system</a></li>
+						<li><a href="#">Leave management system</a></li>
+						<li><a href="#">Accounting Management System</a></li>
+						<li><a href="#">Inventory Management system</a></li>
+					</ul>
+				</li>
+				<li>
+					<label for="btn-4" class="show">TRAINING ACADEMY +</label>
+					<a href="#">
+						<i class="far fa-file-alt"></i>
+						SECURITY COURSE
+					</a>
+					<input type="checkbox" id="btn-4">
+					<ul>
+						<li><a href="#">Certified data center Professional(CDCP)</a></li>
+						<li><a href="#">Certified data center specialist(CDCS)</a></li>
+						<li><a href="#">Certified Information system Auditor(CISA)</a></li>
+					</ul>
+				</li>
+				<li>
+					<label for="btn-5" class="show">TRAINING ACADEMY +</label>
+					<a href="#">
+						<i class="far fa-file-alt"></i>
+						PLACEMENT
+					</a>
+					<input type="checkbox" id="btn-5">
+					<ul>
+						<li><a href="#">Frelancer job placement</a></li>
+						<li><a href="#">USA job placement</a></li>
+					</ul>
+				</li>
+				<li ><a href="#" id='contact'>
+							<i class="far fa-envelope"></i>Contact
+						</a>
+				</li>
+			</ul>
+			
+		
+        </nav>
+        </div>
+            </div>
+        </section>
+		<!-- navbar 2 ends  -->
+        
+        <!-- slider section starts  -->
+        <div class="bg_slider owl-carousel" >
+            
+            <div class="single_slide" style="background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url('./image/intro_1.jpg');">
+                
+                <div class="slide_content">
+                    <div class="center">
+                        
+                        <h3 class="animate__animated animate__fadeInUpBig">IT BANGLA LTD</h3>
+                        <h1 class="animate__animated animate__fadeInTopRight">LIVE PROJECT TRAINING</h1>
+                        <h3 class="animate__animated animate__fadeInRight">WHERE YOU CAN BUILD YOUR FUTURE</h3>
+                        <a class="btn btn-warning" href="#">Read More</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="single_slide" style="background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url('./image/intro_2.jpg');">
+                <div class="slide_content">
+                    <div class="center">
+                        
+                        
+                        
+                        <h3 class="animate__animated animate__fadeInUpBig">IT BANGLA LTD</h3>
+                        <h1 class="animate__animated animate__fadeInTopRight" id='content2' >Local & abroad Job Placement Training</h1>
+                        <h3 class="animate__animated animate__fadeInRight">WHERE YOU CAN BUILD YOUR FUTURE</h3>
+                        <a class="btn btn-warning" href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slide" style="background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url('./image/intro_3.jpg');">
+                <div class="slide_content">
+                    <div class="center">
+                        
+                        <h3 class="animate__animated animate__fadeInUpBig">IT BANGLA LTD</h3>
+                        <h1 class="animate__animated animate__fadeInTopRight" id="content2">100% IT scholarship Course & Vendor Exam</h1>
+                        <h3 class="animate__animated animate__fadeInRight">WHERE YOU CAN BUILD YOUR FUTURE</h3>
+                        <a class="btn btn-warning" href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- slider section starts  -->
+        
+    </header>
+    <!-- header section ends  -->
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    
+    
+    
+    
+    <!-- jquery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    
+	<!-- owl carousel script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    
+
+
+	<script>
+
+		// header slider 
+		$('.bg_slider').owlCarousel({
+			items: 1,
+			loop: true,
+			dots: true,
+			autoplay: true,
+			stagePadding: 0
+
+		});
+
+		// partner slider
+		
+
+		// $('.partner_section').owlCarousel({
+		// 	center: true,
+		// 	items:1,
+    	// 	loop:true,
+    	// 	margin:10,
+    	// 	nav:false,
+		// 	autoplay: true
+		// })
+	</script>
+
+
+
+
+    </body>
+</html>
